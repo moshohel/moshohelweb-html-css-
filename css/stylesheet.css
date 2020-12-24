@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+/* CSS custom properties */
+:root {
+	--primary-color:#047aed;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -36,8 +41,9 @@ img {
 	width: 100%;
 }
 
+/* navbar */
 .navbar {
-	background-color: #047aed;
+	background-color: var(--primary-color);
 	color: #fff;
 	height: 70px;
 }
@@ -59,6 +65,27 @@ img {
 	justify-content: space-between;
 }
 
+/* Showcase */
+.showcase {
+	height: 400px;
+	background-color: var(--primary-color);
+	color: #fff;
+	position: relative;
+}
+
+.showcase h1 {
+	font-size: 40px;
+}
+
+.showcase p {
+	margin: 20px 0;
+}
+
+.showcase .grid {
+	grid-template-columns: 55% 45%;
+}
+
+/* Utilities (classes will use all around the web site) */
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
@@ -68,6 +95,18 @@ img {
 
 .flex {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.grid {
+	display: grid;
+	/* grid-template-columns: 300px 200px; */
+	/* use of fraction */
+	/* grid-template-columns: 2fr 1fr; */
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
